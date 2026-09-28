@@ -11,6 +11,7 @@ COLUMNAS = {
     "TRIMESTRE":  {"tipo": "int",    "completitud": 100},
     "ITF":        {"tipo": "int",    "completitud": 72},
     "GDECCFR":    {"tipo": "int",    "completitud": 68},
+    "NIVEL_ED ":  {"tipo": "int",    "completitud": 88}
 }
 
 # 2) Estructura de roles
@@ -32,6 +33,11 @@ ROLES = {
         "orden_forma": "B",
         "completitud_minima": 90,   
     },
+    "auditor": {
+        "columnas": list(COLUMNAS.keys()),
+        "orden_por": "nombre",
+        "orden_forma": "B",
+    }
 }
 
 def informar_columnas(rol=None):
